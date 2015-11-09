@@ -12,6 +12,8 @@ git clone https://github.com/tatsuhiro-t/nghttp2
 
 cd nghttp2
 
+git submodule update --init
+
 if test ! -r "configure"; then
   autoreconf -i
   automake
@@ -19,4 +21,4 @@ if test ! -r "configure"; then
 fi
 
 ./configure --enable-app --disable-hpack-tools --disable-examples \
-	    --prefix=/usr
+	    --prefix=/usr --with-mruby
