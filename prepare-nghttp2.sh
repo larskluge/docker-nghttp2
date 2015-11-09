@@ -8,11 +8,7 @@ apt-get install $minimal_apt_get_args $NGHTTP2_BUILD_PACKAGES
 
 cd /build
 
-if test -n "$NGHTTP2_VERSION"; then
-  curl -SL https://github.com/tatsuhiro-t/nghttp2/releases/download/v${NGHTTP2_VERSION}/nghttp2-${NGHTTP2_VERSION}.tar.xz | tar -x -J && mv nghttp2-${NGHTTP2_VERSION} nghttp2
-else
-  git clone https://github.com/tatsuhiro-t/nghttp2
-fi
+git clone https://github.com/tatsuhiro-t/nghttp2
 
 cd nghttp2
 
