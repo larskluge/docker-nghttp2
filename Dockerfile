@@ -4,7 +4,7 @@ MAINTAINER Dave Beckett <dave@dajobe.org>
 
 COPY *.sh /build/
 
-ENV NGHTTP2_VERSION 1.7.1
+ENV NGHTTP2_VERSION 1.9.2
 
 RUN /build/prepare-nghttp2.sh && \
     cd /build/nghttp2 && make install && \
